@@ -4,15 +4,9 @@ import "./index.css";
 import App from "./App";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
+import birdApp from "./store/birds/birds";
 
-const store = createStore(() => ({
-  birds: [
-    {
-      name: "robins",
-      view: 1,
-    },
-  ],
-}));
+const store = createStore(birdApp);
 
 ReactDOM.render(
   <React.StrictMode>
